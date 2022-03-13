@@ -133,9 +133,8 @@ li{
 }
 
 .infoblock {
-    display: block;
-    float: left;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: bolder;
+    /* display: inline-block; */
 }
