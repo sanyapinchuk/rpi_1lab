@@ -4,7 +4,9 @@
 }
 body{
     margin: 0;
-    
+    font-family: Comfortaa, cursive;
+    text-align: center;  
+    font-size: 50px;
 }
 a{
     text-decoration: none;
@@ -80,4 +82,52 @@ li{
 }
 #contacts li:last-child::after{
     content: none;
+}
+#blockCenter {
+    background-color: #FFF;
+    margin: 100px 215px 0px 215px;
+    width: 1170px;
+    height: 753px;
+}
+#blocktext {
+    margin-top: 35px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+    text-align: left;
+    line-height: 25px;
+    padding: 0px 70px 0px 70px;
+}
+#contactbutton1 {
+    width: 134px;
+    height: 40px;
+    border: 2px solid #454444;
+    font-size: 13px;
+    display: block;
+    float: left;
+    margin-right: 4px;
+    
+    font-family: 'Montserrat', sans-serif;
+    background-color: #454444;
+    color: aliceblue;
+}
+#contactbutton2 {
+    width: 134px;
+    height: 40px;
+    border: 2px solid #454444;
+    font-size: 13px;
+    display: block;
+    float: left;
+    margin-right: 4px;
+    
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff; 
+    color:#454444;
+}
+#contactbutton1:hover{
+    background-color:#bcb5b5;
+    transition: all 0.5s;
+}
+#contactbutton2:hover{
+    background-color:#bcb5b5;
+    transition: all 0.5s;
 }
