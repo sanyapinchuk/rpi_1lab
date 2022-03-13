@@ -27,6 +27,7 @@ li{
     /*line-height: 63px;*/
     font-weight: 700;
     display: flex;
+    justify-content: space-evenly;
 }
 #first_background{
     background-image: url('../img/first_background.png');
@@ -37,7 +38,6 @@ li{
     height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 212.8px;
     font-size: 18px;
 }
 #logo img{
@@ -45,17 +45,39 @@ li{
 }
 #top_menu{
     display: flex;
-    margin-left: 90px;
+    margin: 0;
     align-items: center;
     font-size: 12px;
+    width: 700px;
+    justify-content: space-evenly;
 }
-#top_menu li{
-    margin-left: 10px;
+.sub_menu{
+    
+    height: 100%;
+    line-height: 63px;
+    user-select: none;
+    transition: all 0.5s;
+    color:red; 
+}
+.sub_menu a{
+    transition: all 0.5s;
+}
+
+.sub_menu:hover a{
+    font-size: 14px;
+    color:red; 
 }
 #contacts{
     display: flex;
-    margin-left: 200px;
+    align-items: center;
 }
 #contacts li{
     display: inline-block;
+}
+#contacts li::after{
+    content: "|";
+    font-size: 19px;
+}
+#contacts li:last-child::after{
+    content: none;
 }
