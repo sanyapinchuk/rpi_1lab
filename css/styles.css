@@ -131,3 +131,11 @@ li{
     background-color:#bcb5b5;
     transition: all 0.5s;
 }
+
+.infoblock {
+    display: block;
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: bolder;
+}
