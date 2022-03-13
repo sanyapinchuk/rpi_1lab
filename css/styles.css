@@ -4,7 +4,7 @@
 }
 body{
     margin: 0;
-    
+    font-family: 'Comfortaa', cursive;
 }
 a{
     text-decoration: none;
@@ -33,6 +33,10 @@ li{
     background-image: url('../img/first_background.png');
     background-repeat: no-repeat;
     height: 698px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 #logo{
     height: 100%;
@@ -80,4 +84,54 @@ li{
 }
 #contacts li:last-child::after{
     content: none;
+}
+#pop_menu{
+    text-align: center;
+    margin:auto;
+    color: #FFF;
+}
+#description{
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px;
+}
+#our_company{
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Amsdam';
+    font-size: 36px;
+    margin-top: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+#start_button{
+    border:  2px solid white;
+    width: 150px;
+    padding: 10px;
+    height: 40px;
+    margin: auto;
+    font-size: 15px;
+    color: #FFF;
+}
+#start_button a{
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#description::after{
+    margin-top: 26px;
+}
+.first_list::after{
+    content: url('../img/Line.png');
+    display: block;    
+}
+.first_list:last-child::after{
+    content: none;
+    display: none;
+}
+#start_button:hover{
+    color: black;
+    background-color: white;
+}
+#arrow:hover ~ #start_button{
+    color: black;
+    background-color: white;
 }
