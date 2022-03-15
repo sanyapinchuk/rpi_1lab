@@ -4,7 +4,7 @@
 }
 body{
     margin: 0;
-    font-family: Comfortaa, cursive;   
+    font-family: 'Comfortaa', cursive;
 }
 a{
     text-decoration: none;
@@ -33,6 +33,10 @@ li{
     background-image: url('../img/first_background.png');
     background-repeat: no-repeat;
     height: 698px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 #logo{
     height: 100%;
@@ -105,7 +109,6 @@ li{
     padding: 0px 70px 0px 70px;
 }
 #contactbutton1 {
-    text-align: center;  
     width: 134px;
     height: 40px;
     border: 2px solid #454444;
@@ -119,7 +122,6 @@ li{
     color: aliceblue;
 }
 #contactbutton2 {
-    text-align: center;  
     width: 134px;
     height: 40px;
     border: 2px solid #454444;
@@ -142,14 +144,12 @@ li{
 }
 
 .infoblock {
-    text-align: center;  
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: bolder;
     /* display: inline-block; */
 }
 #imageblock_k {
-    text-align: center;  
     width: 1600px;
     height: 660px;
     background-image: url('../img/fonK.png'); 
@@ -165,7 +165,6 @@ li{
 }
 
 .manphoto_k {
-    text-align: center;  
     display: inline-block;
     width: 271px;
     height: 338px;
@@ -175,7 +174,6 @@ li{
 }
 
 .maninfo_k {
-    text-align: center;  
     transition: opacity 0.5s;
     /* display: none;  */
     background-color: aliceblue;
