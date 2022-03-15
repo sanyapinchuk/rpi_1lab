@@ -69,18 +69,18 @@ li{
     font-size: 14px;
     color:red; 
 }
-#contacts{
+.contacts{
     display: flex;
     align-items: center;
 }
-#contacts li{
+.contacts li{
     display: inline-block;
 }
-#contacts li::after{
+.contacts li::after{
     content: "|";
-    font-size: 19px;
+    font-size: 14px;
 }
-#contacts li:last-child::after{
+.contacts li:last-child::after{
     content: none;
 }
 #blockCenter {
@@ -148,16 +148,70 @@ li{
 }
 
 #teamdescription {
-    display: inline-block;
+    /* display: inline; */
     
     margin-top: 30px;
 }
 
 .manphoto_k {
     display: inline-block;
+    width: 271px;
+    height: 338px;
     margin-right: 30px;
+    background-image: url('../img/man.png');
+    
 }
 
-.manphoto_k:hover {
+.maninfo_k {
+    transition: opacity 0.5s;
+    /* display: none;  */
+    background-color: aliceblue;
+    opacity: 0;
+    margin: 9px 7px 9px 7px;
 
+    width: 257px;
+    height: 320px;
+
+    font-size: 13px; 
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.profession_k {
+    margin-top: 4px;
+    margin-left: 20px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.profession_k:after {
+    margin-top: 10px;
+    content: "";
+    display: block;
+    width: 146px;
+    height: 2px;    
+    background-color: black;
+}
+
+.socialnetw_k {
+    margin-top: 5px;
+    margin-left: 20px;
+    /* display: inline-block; */
+}
+
+#first_man_photo_k:hover #first_man_info_k {
+    opacity: .5;
+    display: block;
+}
+
+#second_man_photo_k:hover #second_man_info_k {
+    
+    opacity: .5;
+    display: block;
+}
+
+#third_man_photo_k:hover #third_man_info_k {
+    opacity: .5;
+    display: block;
 }
