@@ -81,3 +81,60 @@ li{
 #contacts li:last-child::after{
     content: none;
 }
+#services_background
+{
+    background-image: url('../img/services-back.png');
+    background-repeat: no-repeat;
+    height: 698px;
+}
+.dd_services_text
+{
+    display: inline-block;
+    color: wheat;
+    
+}
+#dd_menu_names
+{
+    margin-left: 314.31px;
+    text-align: center;
+    margin: auto;
+    margin-top: 164.6px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #CCC;
+}
+.dd_services
+{
+   
+    background-repeat: no-repeat;
+    padding: 40px 40px 40px 40px;
+    height: 600px;
+    
+}
+
+.dd_title_of_sertifications
+{
+    text-align: center;
+    margin: 40px auto 0 auto;
+    height: 54px;
+   
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+.dd_services:hover .dd_title_of_sertifications
+{
+    /*font-size: 17px;*/
+    letter-spacing: 5px;
+}
+.dd_descriptions_of_sertifications {
+    width: 190px;
+    margin-top: 15.68px;
+    word-spacing: 2px;
+    padding-bottom: 40px;
+    font-family: 'Crimson', cursive;
+    font-size: 13px;
+}
+.lamp_icon{
+    padding-bottom: 40px;
+}
