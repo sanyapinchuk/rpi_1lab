@@ -80,7 +80,6 @@ li{
     display: inline-block;
    
 }
-
 .contacts i{
     transition: all 0.5s;
 }
@@ -94,91 +93,6 @@ li{
 }
 .contacts li:last-child::after{
     content: none;
-}
-#pop_menu{
-    text-align: center;
-    margin:auto;
-    color: #FFF;
-}
-#description{
-    font-family: 'Crimson Pro', serif;
-    font-size: 14px;
-}
-#our_company{
-    /*font-family: 'Montserrat', sans-serif;*/
-    font-family: 'Amsdam';
-    font-size: 36px;
-    margin-top: 36px;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-}
-#our_company img{
-    transition: all 0.5s;
-}
-#our_company img:first-child{
-    margin-right: 300px; 
-    cursor: pointer;
-}
-#our_company img:last-child{
-    margin-left: 300px; 
-    cursor: pointer;
-}
-#our_company img:hover{
-    transform: scale(1.2);
-}
-#start_button{
-    border:  2px solid white;
-    width: 150px;
-    padding: 10px;
-    height: 40px;
-    margin: auto;
-    font-size: 15px;
-    color: #FFF;
-}
-#start_button{
-    color: #FFF;
-    font-family: 'Montserrat', sans-serif;
-    transition: all 0.5s;
-}
-#description::after{
-    margin-top: 26px;
-}
-.first_list::after{
-    content: url('../img/Line.png');
-    display: block;    
-}
-.first_list:last-child::after{
-    content: none;
-    display: none;
-}
-#start_button:hover{
-    color: black;
-    background-color: white;
-}
-#arrow:hover ~ #start_button{
-    color: black;
-    background-color: white;
-}
-#history_block{
-    background-color: #ededed;
-}
-.titles{
-    font-family: 'Amsdam';
-    text-align: center;
-    font-size: 20px;
-    margin-top: 60px;
-}
-.titles::after{
-    content: url('../img/black_line.png');
-    display: block;
-}
-.titles_description{
-    font-family: 'Crimson Pro', serif;
-    text-align: center;
-    font-size: 14px;
-    width: 1000px;
-    margin: 30px auto;
-    letter-spacing: 1.5px;
 }
 #blockCenter {
     background-color: #FFF;
@@ -195,7 +109,6 @@ li{
     padding: 0px 70px 0px 70px;
 }
 #contactbutton1 {
-    text-align: center;  
     width: 134px;
     height: 40px;
     border: 2px solid #454444;
@@ -209,7 +122,6 @@ li{
     color: aliceblue;
 }
 #contactbutton2 {
-    text-align: center;  
     width: 134px;
     height: 40px;
     border: 2px solid #454444;
@@ -232,14 +144,12 @@ li{
 }
 
 .infoblock {
-    text-align: center;  
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: bolder;
     /* display: inline-block; */
 }
 #imageblock_k {
-    text-align: center;  
     width: 1600px;
     height: 660px;
     background-image: url('../img/fonK.png'); 
@@ -255,7 +165,6 @@ li{
 }
 
 .manphoto_k {
-    text-align: center;  
     display: inline-block;
     width: 271px;
     height: 338px;
@@ -265,7 +174,6 @@ li{
 }
 
 .maninfo_k {
-    text-align: center;  
     transition: opacity 0.5s;
     /* display: none;  */
     background-color: aliceblue;
