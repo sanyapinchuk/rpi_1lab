@@ -167,7 +167,6 @@ li{
     text-align: center;
     font-size: 20px;
     margin-top: 60px;
-    letter-spacing: 3px;
 }
 .titles::after{
     content: url('../img/black_line.png');
@@ -198,21 +197,8 @@ li{
     line-height: 25px;
     padding: 0px 70px 0px 70px;
 }
-#contactbutton1 {
-    text-align: center;  
-    width: 134px;
-    height: 40px;
-    border: 2px solid #454444;
-    font-size: 13px;
-    display: block;
-    float: left;
-    margin-right: 4px;
-    
-    font-family: 'Montserrat', sans-serif;
-    background-color: #454444;
-    color: aliceblue;
-}
-#contactbutton2 {
+
+.contactbutton {
     text-align: center;  
     width: 134px;
     height: 40px;
@@ -226,13 +212,10 @@ li{
     background-color: #fff; 
     color:#454444;
 }
-#contactbutton1:hover{
-    background-color:#bcb5b5;
+.contactbutton:hover{
+    background-color: #454444;
     transition: all 0.5s;
-}
-#contactbutton2:hover{
-    background-color:#bcb5b5;
-    transition: all 0.5s;
+    color: #E3E3E3;
 }
 
 .infoblock {
@@ -380,4 +363,57 @@ li{
 }
 .lamp_icon{
     padding-bottom: 40px;
+}
+#portfolio_k {
+    width: 1600px;
+    height: 355px;
+}
+#pictureset_k {
+    width: 1600px;
+    height: 708px;
+    display: flex;
+    align-items: flex-start;
+}
+.twopictures {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 160px;
+    
+}
+.around_two_pictures{
+    display: inline-block;
+    width: 25%;
+    height: 708px;
+    overflow: hidden;
+}
+.around_two_pictures div{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+}
+.around_two_pictures img{
+    width: 400px;
+}
+#prices_k {
+    height: 920px;
+    width: 1600px;
+    background-color: #e3e3e3;
+}
+
+#price_blocks_k {
+    width: 1600px;
+    height: 550px;  
+    margin-left: 215px;
+    justify-content: space-evenly;
+}
+.price_k {
+    display: inline-block;
+    text-align: center;
+    margin-right: 30px;
+    width: 370px;
+    height: 550px;
+    background-color: white;
 }
