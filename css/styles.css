@@ -173,6 +173,9 @@ li{
     content: url('../img/black_line.png');
     display: block;
 }
+.white-line::after{
+    content: url('../img/Line-short.png');
+}
 .titles_description{
     font-family: 'Crimson Pro', serif;
     text-align: center;
@@ -318,4 +321,63 @@ li{
 #third_man_photo_k:hover #third_man_info_k {
     opacity: .5;
     display: block;
+}
+#services_background
+{
+    background-image: url('../img/services-back.png');
+    background-repeat: no-repeat;
+    height: 698px;
+}
+.dd_services_text
+{
+    display: inline-block;
+    color: wheat;
+    
+}
+#dd_menu_names
+{
+    margin-left: 314.31px;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #CCC;
+}
+.dd_services
+{
+   
+    background-repeat: no-repeat;
+    padding: 40px 40px 40px 40px;
+    height: 600px;
+    
+}
+
+.dd_title_of_sertifications
+{
+    text-align: center;
+    margin: 40px auto 0 auto;
+    height: 54px;
+   
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.5s;
+    
+}
+.dd_services:hover .dd_title_of_sertifications
+{
+    /*font-size: 17px;*/
+    letter-spacing: 5px;
+}
+.dd_descriptions_of_sertifications {
+    width: 190px;
+    margin-top: 15.68px;
+    word-spacing: 2px;
+    padding-bottom: 40px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.lamp_icon{
+    padding-bottom: 40px;
 }
