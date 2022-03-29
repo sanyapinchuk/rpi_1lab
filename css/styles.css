@@ -337,18 +337,23 @@ li{
 .dd_title_of_sertifications
 {
     text-align: center;
-    margin: 40px auto 0 auto;
+     margin: 20px auto 0 auto;   
     height: 54px;
-   
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* margin: auto; */
     
 }
 .dd_services:hover .dd_title_of_sertifications
 {
     /*font-size: 17px;*/
     letter-spacing: 5px;
+    /* margin-left: 10px; */
 }
 .dd_descriptions_of_sertifications {
     width: 190px;
