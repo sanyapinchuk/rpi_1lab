@@ -122,6 +122,9 @@ li{
     content: "|";
     font-size: 19px;
 }
+.white-after li::after{
+    color:#aaaaaa;
+}
 .contacts li:last-child::after{
     content: none;
 }
