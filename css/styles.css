@@ -453,14 +453,17 @@ li{
 	border-top: 10px solid #2d2d2f; 
     margin: 1px auto;
 }
-footer{
-    height: 637px;
+footer {
+    height: 686px;
     width: 1600px;
     background: url(../img/footer_back.png) no-repeat;
+    background-repeat-y: repeat;
     background-size: 100%;
-    /*background-color: rgb(245, 170, 255);*/
+    /* background-color: rgb(245, 170, 255); */
     padding-top: 50px;
     padding-left: 215px;
+    font-family: 'Crimson Pro', serif;
+    letter-spacing: 2px;
 }
 #logotype{
     display: flex;
@@ -470,14 +473,14 @@ footer{
     font-family: 'Montserrat';
     letter-spacing: 1.5px;
 }
-#textFooter{
+.textFooter{
     width: 370px;
     font-family: 'Crimson Pro', serif;
-    font-size: 14px;
+    font-size: 15px;
     color: #949494;
     padding-bottom: 34px;
 }
-#textFooterUpper{
+.textFooterUpper{
     width: 370px;
     font-family: 'Montserrat'; 
     letter-spacing: 1.5px;
@@ -494,9 +497,9 @@ footer{
     width: 373px;
     height: 55px;
     font-family: 'Crimson Pro', serif;
-    font-size: 14px;
-    font-style: italic;
-    color: #464646;
+    font-size: 15px;
+    /* font-style: italic; */
+    color: #ddd;
     letter-spacing: 2px;
     margin-right: 20px;
 } 
@@ -507,9 +510,9 @@ footer{
     width: 373px;
     height: 55px;
     font-family: 'Crimson Pro', serif;
-    font-size: 14px;
-    font-style: italic;
-    color: #464646;
+    font-size: 15px;
+    /* font-style: italic; */
+    color: #ddd;
     letter-spacing: 2px;
     margin-bottom: 25px; 
 } 
@@ -520,9 +523,8 @@ footer{
     width: 773px;
     height: 95px;
     font-family: 'Crimson Pro', serif;
-    font-size: 14px;
-    font-style: italic;
-    color: #949494;
+    font-size: 15px;
+    color: #ddd;
     letter-spacing: 2px; 
     padding-bottom: 45px;
     border-color: #464646;
@@ -536,6 +538,10 @@ footer{
     letter-spacing: 1px;
     width: 135px;
     height: 40px;
+    outline: none;
+    border: none;
+    border: solid 2px #464646;
+    color:#c4c4c4;
 }
 .button:hover{
    opacity: 0.5; 
@@ -548,4 +554,14 @@ footer{
     font-style: italic;
     color: #7f7f7f;
     margin-top: 30px;
+}
+footer input{
+    outline: none;
+    border: none;
+    border: solid 3px #464646;
+    color:white;
+}
+footer input::placeholder{
+    font-style: italic;
+    color:#949494;
 }
