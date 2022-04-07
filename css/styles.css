@@ -772,3 +772,47 @@ footer input::placeholder{
     background-color: #e3e3e3;
     color: #2d2d2f;
 }
+#info_bl_k{
+    margin: 35px 215px 65px 215px;
+    display: flex; 
+    width: 1170px;
+    height: 158px;
+    justify-content: space-evenly;
+}
+.name_marg_k{
+    padding-top: 208px;
+     padding-left: 30px;
+}
+#button_collection_k{
+    padding-top: 30px;
+    margin-left: 604px;
+    margin-top: 55px;
+}
+.price_dollar_symb_k{
+    width: 21px; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 28px; 
+    margin-left: 122px;
+}
+.price_num_k{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 70px; 
+    margin-top: -35px;
+}
+.little_title_k{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 13px; 
+    margin-top: 47px;
+}
+.full_access_k{
+    font-family: Crimson Pro; 
+    font-style: italic; 
+    font-size: 16px;
+}
+.italic_k{
+    margin-top: 12px;
+}
+#footer_text_k{
+    margin-top: 40px; 
+    border-bottom:1px solid #3e3e3e;
+}
