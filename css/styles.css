@@ -96,7 +96,13 @@ li{
 .sub_menu a{
     transition: all 0.5s;
 }
-
+#backgr_titileLorem{
+    text-align: center;
+    font-family: 'Amsdam';
+    color: white;
+    font-size: 9px;
+    margin-top: 66px;
+}
 .sub_menu:hover a{
     font-size: 14px;
     color:red; 
@@ -268,6 +274,7 @@ li{
     width: 1600px;
     height: 660px;
     background-image: url('../img/fonK.png'); 
+    padding-top: 60px;
 }
 
 #teamdescription {
