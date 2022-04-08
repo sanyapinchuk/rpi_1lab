@@ -566,12 +566,15 @@ li{
     font-size: 14px;
     font-style: italic;
     color: #e2e3e3;
+    text-align: center;
 }
 .textTesti1{
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     color: #e2e3e3;
+    margin-top: 68px; 
+    text-align: center;
     /*font-style: regular;*/
 }
 .circleSmall{
@@ -638,6 +641,7 @@ footer {
     color: #e2e3e3;
     font-family: 'Montserrat';
     letter-spacing: 1.5px;
+    width: 164px;
 }
 .textFooter{
     width: 370px;
@@ -714,7 +718,7 @@ footer {
    transform: scale(0.95);
 }
 #textAboutCompany{
-    width: 222px;
+    width: 278px;
     font-family: 'Crimson Pro', serif;
     font-size: 14px;
     font-style: italic;
@@ -726,6 +730,21 @@ footer input{
     border: none;
     border: solid 3px #464646;
     color:white;
+}
+footer> div{
+    width:1170px; 
+    height:487px;
+    margin-top: 40px; 
+    border-bottom:1px solid #3e3e3e;
+    display: flex;
+    justify-content: space-evenly;
+}
+.white-after a{
+    color: #aaa;
+}
+form{
+    width:773px; 
+    padding-top: 20px;
 }
 footer input::placeholder{
     font-style: italic;
