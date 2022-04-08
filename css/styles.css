@@ -206,10 +206,12 @@ li{
     content: url('../img/black_line.png');
     display: block;
 }
+.white-line{
+    color: white;
+}
 .white-line::after{
     content: url('../img/Line-short.png');
     color: white;
-    padding-top: 60px;
 }
 .titles_description{
     font-family: 'Crimson Pro', serif;
