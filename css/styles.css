@@ -116,7 +116,10 @@ li{
     display: inline-block;
    
 }
-
+.contacts li:last-child{
+    margin-top: 4px;
+   
+}
 .contacts i{
     transition: all 0.5s;
 }
@@ -150,6 +153,7 @@ li{
     margin-top: 36px;
     letter-spacing: 3px;
     margin-bottom: 40px;
+    font-weight: 200;
 }
 #our_company img{
     transition: all 0.5s;
@@ -190,6 +194,23 @@ li{
     content: none;
     display: none;
 }
+#first_list_first_photo{
+    margin-left: 300px;
+      cursor: pointer;
+}
+#first_list_second_photo{
+    display: block;
+     user-select: none;
+      margin: auto;
+       margin-top: 3px;  
+       text-align: center;
+}
+#infoblock_first{
+
+}
+.infoblock>img{
+    margin-bottom: 10px;
+}
 #start_button:hover{
     color: black;
     background-color: white;
@@ -215,6 +236,7 @@ li{
 }
 .white-line{
     color: white;
+    padding-top: 60px;
 }
 .white-line::after{
     content: url('../img/Line-short.png');
@@ -269,6 +291,11 @@ li{
     font-size: 13px;
     font-weight: bolder;
     /* display: inline-block; */
+    border-right: 1px solid;
+    width: 270px;
+}
+.infoblock:last-child{
+    border-right: none;
 }
 #imageblock_k {
     text-align: center;  
@@ -277,7 +304,9 @@ li{
     background-image: url('../img/fonK.png'); 
     padding-top: 60px;
 }
-
+#imageblock_k .titles{
+    margin-top: 0;
+}
 #teamdescription {
     /* display: inline; */
     
@@ -354,6 +383,9 @@ li{
     background-image: url('../img/services-back.png');
     background-repeat: no-repeat;
     height: 698px;
+}
+#services_background .titles_description{
+    color: white;
 }
 .dd_services_text
 {
@@ -475,6 +507,16 @@ li{
     height: 550px;
     background-color: white;
 }
+.price_k>a>div{
+    padding-top: 10px;
+     margin-left: 115px;
+      margin-top: 50px;
+
+      
+}
+.price_k>img{
+    margin-top: 20px;
+}
 #rectangleBlog{
     margin-top: 30px;
     height: 826px;
@@ -548,6 +590,10 @@ li{
 .clients{
     height: 523px; 
     background-color: #fff;
+}
+.clients .titles{
+    margin-top: 0; 
+    padding-top: 70px;
 }
 .logotypes{
     display:flex; 
@@ -648,6 +694,7 @@ li{
     background-color: #2d2d2f;
     border: 2px solid #a1a1a1;
     padding-top: 13px;
+    text-align:center
 }
 .triangle_map{
     width: 0;
