@@ -264,7 +264,21 @@ li{
     line-height: 25px;
     padding: 0px 70px 0px 70px;
 }
-.contactbutton {
+.contactbutton{
+    text-align: center;  
+    width: 134px;
+    height: 40px;
+    border: 2px solid #454444;
+    font-size: 13px;
+    display: block;
+    float: left;
+    margin-right: 4px;
+    
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff; 
+    color:#454444;
+}
+.contactbuttondd {
     margin: auto;
     width: 134px;
     height: 40px;
@@ -276,7 +290,7 @@ li{
     margin-top: 30px;
     line-height: 32px;
 }
-.contactbutton:hover{
+.contactbutton:hover, .contactbuttondd:hover {
     background-color: #454444;
     transition: all 0.5s;
     color: #E3E3E3;
@@ -781,6 +795,7 @@ footer {
     border: none;
     border: solid 2px #464646;
     color:#c4c4c4;
+    cursor: pointer;
 }
 .button:hover{
    opacity: 0.5; 
@@ -861,6 +876,15 @@ footer input::placeholder{
     background-color: #e3e3e3;
     color: #2d2d2f;
 }
+#kompas_block .contactbuttondd{
+    background-color: #2d2d2f;
+    border: 2px solid #e3e3e3;
+    color: #e3e3e3;
+}
+#kompas_block .contactbuttondd:hover{
+    background-color: #e3e3e3;
+    color: #2d2d2f;
+}
 #info_bl_k{
     margin: 35px 215px 65px 215px;
     display: flex; 
@@ -909,15 +933,15 @@ footer input::placeholder{
 {
     text-align: left;
 }
-#dd_offset
+.dd_offset
 {
     padding-top: 10px;
 }
-#dd_margin10
+.dd_margin10
 {
     margin-bottom: 10px;
 }
-#dd_margin3
+.dd_margin3
 {
     margin-bottom: 3px;
 }
@@ -929,11 +953,11 @@ footer input::placeholder{
 {
     font-size: 45px;
 }
-#dd_margin4
+.dd_margin4
 {
     margin-bottom: 4px;
 }
-#dd_margin5
+.dd_margin5
 {
     margin-bottom: 5px;
 }
@@ -941,7 +965,7 @@ footer input::placeholder{
 {
     background-image: url('../img/Lamp.png');
 }
-#dd_width70
+.dd_width70
 {
     width: 70px;
 }
@@ -949,7 +973,7 @@ footer input::placeholder{
 {
     background-image: url('../img/Monik.png');
 }
-#dd_width6538
+.dd_width6538
 {
     width: 65.38px;
 }
@@ -957,7 +981,7 @@ footer input::placeholder{
 {
     background-image: url('../img/Chart.png');
 }
-#dd_width8338
+.dd_width8338
 {
     width: 83.38px;
 }
@@ -965,32 +989,32 @@ footer input::placeholder{
 {
     background-image: url('../img/W-letter.png');
 }
-#dd_width10009
+.dd_width10009
 {
     width: 100.09px;
 }
-#dd_margin60
+.dd_margin60
 {
     margin-bottom: 60px;
 }
-#dd_margin0_padding60
+.dd_margin0_padding60
 {
     margin-top: 0; 
     padding-top: 60px;
 }
-#dd_width60
+.dd_width60
 {
     width: 60px;
 }
-#dd_padding10
+.dd_padding10
 {
     padding-top: 10px;
 }
-#dd_width100
+.dd_width100
 {
     width: 100px;
 }
-#dd_width85
+.dd_width85
 {
     width: 85px;
 }
@@ -1038,7 +1062,7 @@ footer input::placeholder{
 {
     height: 87.59px;
 }
-#dd_margin125
+.dd_margin125
 {
     margin-left: 125px;
 }
@@ -1066,7 +1090,7 @@ footer input::placeholder{
 {
     text-align: center;
 }
-#dd_padding30
+.dd_padding30
 {
     padding-bottom: 30px;
 }
@@ -1099,4 +1123,8 @@ footer input::placeholder{
 span
 {
     display: block;
+}
+#portfolio-title{
+    margin-top: 0;
+    padding-top: 50px;
 }
