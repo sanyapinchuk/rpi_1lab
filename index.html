@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        
 
         <title>ATLANTIDA</title>
     </head>  
@@ -613,17 +614,19 @@
                             <li><a href="#"><i class="fab fa-behance"></i></a></li>
                         </ul>
                     </div>
-                    <form>
+                    <form name="submitform">
                         <input type="name" class="field_text" placeholder="Name*" required>
                         <input type="email" class="field_text1" placeholder="E-mail*" required>
                         <input type="telephone" class="field_text" placeholder="Telephone*" required>
                         <input type="website" class="field_text1" placeholder="Website">
                         <input type="message" class="field_text_message" placeholder="Message">
-                        <button class="button">Submit</button>
+                        <button id="submitbutton" class="button" disabled="true">Submit</button>
+                       
                     </form>
                 </div>
                 <p id="textAboutCompany">Copyright © 2015 Atlantida Theme</p>
             </footer>
         </div>
+        <script src="js/validation.js"></script>
     </body>
 </html>
