@@ -1132,3 +1132,18 @@ span
 {
     
 }
+#ddAlert
+{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    line-height: 200px;
+    user-select: none;
+    font-size: 23px;
+    left: calc(50% - 200px);
+    top: calc(50% - 100px);
+    background-color: #777;
+    color: white;
+}

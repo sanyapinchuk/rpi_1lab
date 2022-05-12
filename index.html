@@ -304,28 +304,28 @@
                 </p>
                 <div id="button_collection_k">
                     <a href="#">
-                        <div class="contactbutton dd_width60">
+                        <div class="contactbutton dd_width60" id="ddAll">
                             <span class="dd_padding10">
                                 <b>ALL</b>
                             </span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="contactbutton dd_width100">
+                        <div class="contactbutton dd_width100" id="ddSite">
                             <span class="dd_padding10">
                                 <b>WEBSITE</b>
                             </span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="contactbutton">
+                        <div class="contactbutton" id="ddBrochures">
                             <span class="dd_padding10">
                                 <b>BROCHURES</b>
                             </span>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="contactbutton dd_width85">
+                        <div class="contactbutton dd_width85" id="ddLogos">
                             <span class="dd_padding10">
                                 <b>LOGOS</b>
                             </span>
@@ -613,13 +613,16 @@
                             <li><a href="#"><i class="fab fa-behance"></i></a></li>
                         </ul> 
                     </div> 
-                    <form>
-                        <input type="name" class="field_text" placeholder="Name*" required>
-                        <input type="email" class="field_text1" placeholder="E-mail*" required>
-                        <input type="telephone" class="field_text" placeholder="Telephone*" required>
-                        <input type="website" class="field_text1" placeholder="Website">
-                        <input type="message" class="field_text_message" placeholder="Message">
-                        <button class="button">Submit</button>
+                    <form onkeypress="ddCheckFields();">
+                        <input type="name" id ="ddName" class="field_text" placeholder="Name*" required onfocusout="ddNameValidation()">
+                        <input type="email" id="ddEmail" class="field_text1" placeholder="E-mail*" required onfocusout="ddEmailValidation()">
+                        <input type="telephone" id="ddTelephone" class="field_text" placeholder="Telephone*" required onfocusout="ddTelephoneValidation()">
+                        <input type="website" id="ddWebsite" class="field_text1" placeholder="Website" required onfocusout="ddWebsiteValidation()">
+                        <input type="message" id="ddMessage" class="field_text_message" placeholder="Message" required onfocusout="ddMessageValidation()">
+                        <button class="button" id="ddSubmit">Submit</button>
+                        <div id="ddAlert">
+                            Данные отправлены
+                        </div>
                     </form>
                 </div>
                 <p id="textAboutCompany">Copyright © 2015 Atlantida Theme</p>
