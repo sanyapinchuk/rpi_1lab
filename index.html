@@ -18,7 +18,7 @@
 
         <title>ATLANTIDA</title>
     </head>  
-    <body>
+    <body onload="setBackgr();">
         <div id= "wrapper">
             <div id="header">
                 <a id="logo" href="index.html" >
@@ -46,6 +46,7 @@
             </div>
 
             <div id="first_background">
+                <div id="first_blur"></div>
                 <span id="backgr_titileLorem">
                     Lorem Ipsum
                 </span>
@@ -54,9 +55,9 @@
                         Design Studio and Digital Agency
                     </span>
                     <h1 class="first_list" id="our_company">
-                        <img  src="img/arrow_left.png" alt="">
+                        <img id="first_slider_left" src="img/arrow_left.png" alt="">
                         WE ARE ATLANTIDA
-                        <img id="first_list_first_photo" src="img/arrow_right.png" alt="">
+                        <img id="first_slider_right" src="img/arrow_right.png" alt="">
                     </h1>                    
                     
                     <p class="first_list">
@@ -64,6 +65,7 @@
                         <img id="first_list_second_photo" src="img/Arrow.png" alt="">
                     </p>
                 </div>
+                
             </div>
            
             <div id="blockCenter">                
@@ -575,10 +577,10 @@
             <div class="testimonials">
                 <div class="circle"></div>
                 <div>
-                    <img src="../img/quote1.png" alt=""></img>
+                    <img src="img/quote1.png" alt=""></img>
                     <p id="text_testimonials">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu libero ut erat sodales finibus sed in dolor. 
                         Etiam iaculis, nibh a lobortis egestas, est urna sodales</p>
-                    <img src="../img/quote2.png" alt=""></img>  
+                    <img src="img/quote2.png" alt=""></img>  
                 </div>  
                 <p class="textTesti1">ALEXANDR PODVALNY</p>
                 <p id="text_testimonials1">Free-PSD-Template.com Company</p>
@@ -625,5 +627,6 @@
                 <p id="textAboutCompany">Copyright © 2015 Atlantida Theme</p>
             </footer>
         </div>
+        <script src="js/first_slider.js"></script>
     </body>
 </html>
