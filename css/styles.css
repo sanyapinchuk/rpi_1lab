@@ -602,8 +602,8 @@ li{
 .testimonials{
     height: 518px;
     width: 1600px;
-    background: url(../img/testimonials_back.png) no-repeat;
-    background-size: 100%;
+    background-image: url('../img/testimonials_back.png');
+    background-size: 100%; 
     /*background-color: rgb(170, 255, 188);*/
     padding-top: 75px;
 }
@@ -1127,4 +1127,8 @@ span
 #portfolio-title{
     margin-top: 0;
     padding-top: 50px;
+}
+#dd_podvalny
+{
+    
 }
