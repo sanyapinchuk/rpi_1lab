@@ -83,7 +83,7 @@ function ddShowSliders()
 function ddTimer()
 {
     document.getElementById("ddSubmit").disabled=true;
-    setInterval(ddShowSliders,4000);
+    setInterval(ddShowSliders,10000);
 }
 
 function ddNameValidation()
@@ -301,5 +301,5 @@ document.querySelector("#ddAll").onclick=function()
         document.getElementById("dd_8png").style.backgroundImage="url('img/lock.png')";        
     } 
 
-
+    
 
