@@ -1164,3 +1164,63 @@ span
 {
     
 }
+#kamenFormSignUp
+{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    line-height: 200px;
+    user-select: none;
+    font-size: 23px;
+    left: calc(50% - 200px);
+    top: calc(50% - 100px);
+    background-color: #777;
+    color: white;
+    text-align: center;
+}
+#kamenform{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0;
+}
+#kamenFormSignUp input{
+    /* display: block; */
+
+    height: 30px;
+    background-color: #eee;
+    
+}
+#kamenFormSignUp input:first-child{
+    margin-top: 20px;    
+}
+#kamenFormSignUp input:last-child{
+    background-color: #fff;
+    color: #000000;  
+}
+.kamenAlertClass
+{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    line-height: 200px;
+    user-select: none;
+    font-size: 23px;
+    left: calc(50% - 200px);
+    top: calc(50% - 100px);
+    background-color: #777;
+    color: white;
+}
+#kamenCross {
+    position: absolute;
+    margin-left: 380px;
+    width: 20px;
+    height: 20px;
+    top: -85px;
+}

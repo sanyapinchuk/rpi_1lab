@@ -404,7 +404,7 @@
                         </div>
                             
                       
-                            <span class="contactbuttondd" id="ddSignUp">
+                            <span class="contactbuttondd" id="ddSignUp0">
                                 Sign Up
                             </span>
                      
@@ -442,9 +442,9 @@
                         </div>  
                             
                        
-                            <span class="contactbuttondd" id="ddSignUp">
-                                Sign Up
-                            </span>
+                        <span class="contactbuttondd" id="ddSignUp1">
+                            Sign Up
+                        </span>
                       
                     </div>
                     <div class="price_k">
@@ -480,14 +480,25 @@
                         </div>
                             
                        
-                            <span class="contactbuttondd" id="ddSignUp">
+                            <span class="contactbuttondd" id="ddSignUp2">
                                 Sign Up
                             </span>
                       
                     </div>
                 </div>
             </div>
-            
+
+            <div id="kamenFormSignUp">
+                <div id="kamenCross">X</div>
+                <form onkeypress="kamenCheckFields();" id="kamenform" onsubmit="return false">
+                    <input type="name" id ="kamenName" placeholder="Name*" required onfocusout="ddNameValidation()">
+                    <input type="email" id="kamenEmail" placeholder="E-mail*" required onfocusout="ddEmailValidation()">
+                    <input type="telephone" id="kamenTelephone" placeholder="Telephone*" required onfocusout="ddTelephoneValidation()">
+                    <input type="submit" class="button" id="kamenSubmit">Submit</div>
+                </form>
+            </div>
+            <div id="kamenAlert" class="kamenAlertClass">Вы отправили форму</div>
+            <div id="kamenAlert2" class="kamenAlertClass">Уже зарегистрированы</div>
             <div id="kompas_block">
                 <img src="img/kompas.png" alt="">
                 <div>
@@ -615,7 +626,7 @@
                             <li><a href="#"><i class="fab fa-behance"></i></a></li>
                         </ul> 
                     </div> 
-                    <form onkeypress="ddCheckFields();">
+                    <form onkeypress="ddCheckFields();"onsubmit="return false">
                         <input type="name" id ="ddName" class="field_text" placeholder="Name*" required onfocusout="ddNameValidation()">
                         <input type="email" id="ddEmail" class="field_text1" placeholder="E-mail*" required onfocusout="ddEmailValidation()">
                         <input type="telephone" id="ddTelephone" class="field_text" placeholder="Telephone*" required onfocusout="ddTelephoneValidation()">

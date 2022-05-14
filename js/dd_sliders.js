@@ -98,7 +98,7 @@ function ddNameValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        // alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
     }
     else
     {
@@ -112,7 +112,7 @@ function ddNameValidation()
         }
         if (!found)
         {
-            alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+            // alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
         }
     }
 }
@@ -124,7 +124,7 @@ function ddEmailValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+        // alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
     }
     else
     {
@@ -138,7 +138,7 @@ function ddEmailValidation()
         }
         if (!found)
         {
-            alert("Проверьте введённый e-mail");
+            // alert("Проверьте введённый e-mail");
         }
     }
 }
@@ -150,7 +150,7 @@ function ddTelephoneValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        alert("Телефон должен вводится в виде: +xxxxxxxxx");
+        // alert("Телефон должен вводится в виде: +xxxxxxxxx");
     }
     else
     {
@@ -164,7 +164,7 @@ function ddTelephoneValidation()
         }
         if (!found)
         {
-            alert("Телефон должен вводится в виде: +xxxxxxxxx");
+            // alert("Телефон должен вводится в виде: +xxxxxxxxx");
         }
     }
 }
@@ -176,7 +176,7 @@ function ddWebsiteValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
+        // alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
     }
     else
     {
@@ -190,7 +190,7 @@ function ddWebsiteValidation()
         }
         if (!found)
         {
-            alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
+            // alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
         }
     }
 }
@@ -200,9 +200,81 @@ function ddMessageValidation()
     var value=document.getElementById("ddMessage").value;
     if (value.length==0)
     {
-        alert("Вы не ввели сообщение");
+        // alert("Вы не ввели сообщение");
     }
 }
+
+
+function kamenCheckFields(){
+    empty=false;
+    if (document.getElementById("ddName").value.length==0)
+    {
+        empty=true;
+    }
+    else
+    {
+        if (document.getElementById("ddEmail").value.length==0)
+        {
+            empty=true;
+        }
+        else
+        {
+            if (document.getElementById("ddTelephone").value.length==0)
+            {
+                empty=true;
+            }else
+                {
+                    if (document.getElementById("ddMessage").value.length==0)
+                    {
+                        empty=true;
+                    }
+                }
+            
+        }
+    }
+    if (empty!=true)
+    {
+        document.getElementById("kamenSubmit").disabled=false;
+    }
+}
+function kamenCloseWindow(alertWindow)
+{
+    console.log(alertWindow);
+    
+    console.log('закрыто');
+    alertWindow.style.display="none";
+}
+
+var kamenCounter = 0;
+document.querySelector("#kamenSubmit").onclick=function()
+    {   
+        if (kamenCounter < 1) {
+            var elem=document.getElementById("kamenAlert");
+        } else var elem=document.getElementById("kamenAlert2");
+        kamenCounter++;
+        elem.style.display="block";
+        setTimeout(kamenCloseWindow,5000,elem);
+    }
+document.querySelector("#ddSignUp0").onclick=function(){
+    kamenFormShow();
+} 
+document.querySelector("#ddSignUp1").onclick=function(){
+    kamenFormShow();
+} 
+document.querySelector("#ddSignUp2").onclick=function(){
+    kamenFormShow();
+} 
+function kamenFormShow(){
+    document.getElementById("kamenFormSignUp").style.display="block";
+}
+
+
+document.querySelector("#ddSubmit").onclick=function()
+    {
+        var elem=document.getElementById("ddAlert");
+        elem.style.display="block";
+        setTimeout(ddCloseWindow,5000);
+    }
 
 function ddCheckFields()
 {
@@ -347,4 +419,3 @@ document.querySelector("#ddAll").onclick=function()
         document.querySelector("#first_blur").style.opacity = "1";
         var warn = setTimeout('secFunc()', 400);
     }
-
