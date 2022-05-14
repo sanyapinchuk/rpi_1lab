@@ -419,3 +419,6 @@ document.querySelector("#ddAll").onclick=function()
         document.querySelector("#first_blur").style.opacity = "1";
         var warn = setTimeout('secFunc()', 400);
     }
+    document.querySelector("#kamenCross").onclick = function(){
+        document.getElementById("kamenFormSignUp").style.display="none";
+    }
