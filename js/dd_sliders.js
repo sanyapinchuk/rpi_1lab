@@ -266,6 +266,7 @@ document.querySelector("#ddSignUp2").onclick=function(){
 } 
 function kamenFormShow(){
     document.getElementById("kamenFormSignUp").style.display="block";
+    document.getElementById("wrapper").style.opacity = "0.2";
 }
 
 
@@ -421,4 +422,5 @@ document.querySelector("#ddAll").onclick=function()
     }
     document.querySelector("#kamenCross").onclick = function(){
         document.getElementById("kamenFormSignUp").style.display="none";
+        document.getElementById("wrapper").style.opacity = "1"
     }
