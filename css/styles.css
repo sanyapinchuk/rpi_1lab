@@ -60,7 +60,7 @@ li{
     justify-content: space-evenly;
 }
 #first_background{
-    background-image: url('../img/first_background.png');
+    background-image: url('../img/first_background1.png');
     background-repeat: no-repeat;
     height: 698px;
     display: flex;
@@ -102,6 +102,7 @@ li{
     color: white;
     font-size: 9px;
     margin-top: 66px;
+    z-index: 10;
 }
 .sub_menu:hover a{
     font-size: 14px;
@@ -141,6 +142,7 @@ li{
     text-align: center;
     margin:auto;
     color: #FFF;
+    z-index: 10;
 }
 #description{
     font-family: 'Crimson Pro', serif;
@@ -155,8 +157,19 @@ li{
     margin-bottom: 40px;
     font-weight: 200;
 }
+#first_blur{
+    background: rgba(200, 200, 200,0); 
+    opacity: 0;
+    backdrop-filter: blur(20px); 
+    height: 698px;
+    width: 1600px;
+    transition: all 0.4s;
+    position: absolute;
+    z-index: 5;
+}
 #our_company img{
     transition: all 0.5s;
+    cursor: pointer;
 }
 #our_company img:first-child{
     margin-right: 300px; 
@@ -194,7 +207,7 @@ li{
     content: none;
     display: none;
 }
-#first_list_first_photo{
+#first_slider_right{
     margin-left: 300px;
       cursor: pointer;
 }
