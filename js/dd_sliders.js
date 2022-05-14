@@ -84,7 +84,6 @@ var images = ["url(\"img/first_background1.png\")", "url(\"img/first_background2
 
 function bodyInit()
 {
-    document.getElementById("ddSubmit").disabled=true;
     setInterval(ddShowSliders,10000);
 
     //for 3 task
@@ -98,24 +97,23 @@ function ddNameValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-         alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        return false;//  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
     }
     else
     {
-        var found=false;
+        
         for(var i=0;i<arr.length;i++)
         {
             if (arr[i]==value)
             {
-                found=true;
+                return true;
             }
         }
-        if (!found)
-        {
-             alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
-        }
+        //  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
     }
+    return false;
 }
+
 
 function ddEmailValidation()
 {
@@ -124,23 +122,19 @@ function ddEmailValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-         alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+        return false;//  alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
     }
     else
-    {
-        var found=false;
+    {      
         for(var i=0;i<arr.length;i++)
         {
             if (arr[i]==value)
             {
-                found=true;
+                return true;
             }
-        }
-        if (!found)
-        {
-             alert("Проверьте введённый e-mail");
-        }
+        } 
     }
+    return false;
 }
 
 function ddTelephoneValidation()
@@ -150,23 +144,19 @@ function ddTelephoneValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-         alert("Телефон должен вводится в виде: +xxxxxxxxx");
+        return false;//  alert("Телефон должен вводится в виде: +xxxxxxxxx");
     }
     else
     {
-        var found=false;
         for(var i=0;i<arr.length;i++)
         {
             if (arr[i]==value)
             {
-                found=true;
+                return true;
             }
         }
-        if (!found)
-        {
-             alert("Телефон должен вводится в виде: +xxxxxxxxx");
-        }
     }
+    return false;
 }
 
 function ddWebsiteValidation()
@@ -176,22 +166,19 @@ function ddWebsiteValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-         alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
+        return false;//  alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
     }
     else
     {
-        var found=false;
+        
         for(var i=0;i<arr.length;i++)
         {
             if (arr[i]==value)
             {
-                found=true;
+                return true;
             }
         }
-        if (!found)
-        {
-             alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
-        }
+        return false;
     }
 }
 
@@ -200,8 +187,9 @@ function ddMessageValidation()
     var value=document.getElementById("ddMessage").value;
     if (value.length==0)
     {
-         alert("Вы не ввели сообщение");
+        return false;//  alert("Вы не ввели сообщение");
     }
+    return true;
 }
 
 
@@ -269,54 +257,21 @@ function kamenFormShow(){
     document.getElementById("wrapper").style.opacity = "0.2";
 }
 
-
-document.querySelector("#ddSubmit").onclick=function()
-    {
-        var elem=document.getElementById("ddAlert");
-        elem.style.display="block";
-        setTimeout(ddCloseWindow,5000);
-    }
-
 function ddCheckFields()
 {
-    empty=false;
-    if (document.getElementById("ddName").value.length==0)
+    console.log('clicked');
+    console.log(document.getElementById("ddSubmit").style.disabled);
+    if(ddNameValidation() && ddEmailValidation() && ddTelephoneValidation() && ddWebsiteValidation() && ddMessageValidation()) 
     {
-        empty=true;
-    }
-    else
-    {
-        if (document.getElementById("ddEmail").value.length==0)
-        {
-            empty=true;
-        }
-        else
-        {
-            if (document.getElementById("ddTelephone").value.length==0)
-            {
-                empty=true;
-            }
-            else
-            {
-                if (document.getElementById("ddWebsite").value.length==0)
-                {
-                    empty=true;
-                }
-                else
-                {
-                    if (document.getElementById("ddMessage").value.length==0)
-                    {
-                        empty=true;
-                    }
-                }
-            }
-        }
-    }
-    if (empty!=true)
-    {
-        document.getElementById("ddSubmit").disabled=false;
+        document.getElementById("ddSubmit").removeAttribute('disabled')
+        // console.log(document.getElementById("ddSubmit").setAttribute('disabled',false));
+        
+    } else {
+        document.getElementById("ddSubmit").setAttribute('disabled',true)
+        // console.log(document.getElementById("ddSubmit").style.setAttribute('disabled',true));
     }
 }
+
 
 function ddCloseWindow()
 {
@@ -326,9 +281,12 @@ function ddCloseWindow()
 
 document.querySelector("#ddSubmit").onclick=function()
     {
-        var elem=document.getElementById("ddAlert");
-        elem.style.display="block";
-        setTimeout(ddCloseWindow,5000);
+        if(ddNameValidation() && ddEmailValidation() && ddTelephoneValidation() && ddWebsiteValidation() && ddMessageValidation()) {
+            var elem=document.getElementById("ddAlert");
+            elem.style.display="block";
+            setTimeout(ddCloseWindow,5000);
+        }
+        // document.getElementById("ddSubmit").setAttribute('disabled',true)
     }
 
 document.querySelector("#ddAll").onclick=function()
