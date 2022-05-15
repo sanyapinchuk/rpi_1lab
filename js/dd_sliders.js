@@ -115,6 +115,72 @@ function ddNameValidation()
 }
 
 
+function kamenNameValidation()
+{
+    var regexp=new RegExp("[A-Z][a-z]+");
+    var value=document.getElementById("kamenName").value;
+    var arr=value.match(regexp);
+    if (arr==null)
+    {
+        return false;//  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+    }
+    else
+    {
+        
+        for(var i=0;i<arr.length;i++)
+        {
+            if (arr[i]==value)
+            {
+                return true;
+            }
+        }
+        //  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+    }
+    return false;
+}
+function kamenEmailValidation()
+{
+    var regexp=new RegExp("[a-zA-Z][a-zA-Z0-9]+[@](mail|gmail)['.'](ru|com)");
+    var value=document.getElementById("kamenEmail").value;
+    var arr=value.match(regexp);
+    if (arr==null)
+    {
+        return false;//  alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+    }
+    else
+    {      
+        for(var i=0;i<arr.length;i++)
+        {
+            if (arr[i]==value)
+            {
+                return true;
+            }
+        } 
+    }
+    return false;
+}
+function kamenTelephoneValidation()
+{
+    var regexp=new RegExp("[+][0-9]+");
+    var value=document.getElementById("kamenTelephone").value;
+    var arr=value.match(regexp);
+    if (arr==null)
+    {
+        return false;//  alert("Телефон должен вводится в виде: +xxxxxxxxx");
+    }
+    else
+    {
+        for(var i=0;i<arr.length;i++)
+        {
+            if (arr[i]==value)
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 function ddEmailValidation()
 {
     var regexp=new RegExp("[a-zA-Z][a-zA-Z0-9]+[@](mail|gmail)['.'](ru|com)");
@@ -194,35 +260,15 @@ function ddMessageValidation()
 
 
 function kamenCheckFields(){
-    empty=false;
-    if (document.getElementById("ddName").value.length==0)
+    console.log('clicked');
+    if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) 
     {
-        empty=true;
-    }
-    else
-    {
-        if (document.getElementById("ddEmail").value.length==0)
-        {
-            empty=true;
-        }
-        else
-        {
-            if (document.getElementById("ddTelephone").value.length==0)
-            {
-                empty=true;
-            }else
-                {
-                    if (document.getElementById("ddMessage").value.length==0)
-                    {
-                        empty=true;
-                    }
-                }
-            
-        }
-    }
-    if (empty!=true)
-    {
-        document.getElementById("kamenSubmit").disabled=false;
+        document.getElementById("kamenSubmit").removeAttribute('disabled')
+        // console.log(document.getElementById("ddSubmit").setAttribute('disabled',false));
+        
+    } else {
+        document.getElementById("kamenSubmit").setAttribute('disabled',true)
+        // console.log(document.getElementById("ddSubmit").style.setAttribute('disabled',true));
     }
 }
 function kamenCloseWindow(alertWindow)
@@ -243,6 +289,19 @@ document.querySelector("#kamenSubmit").onclick=function()
         elem.style.display="block";
         setTimeout(kamenCloseWindow,5000,elem);
     }
+
+    document.querySelector("#kamenSubmit").onclick=function()
+    {
+        if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
+            if (kamenCounter < 1) {
+                var elem=document.getElementById("kamenAlert");
+            } else var elem=document.getElementById("kamenAlert2");
+            kamenCounter++;
+            elem.style.display="block";
+            setTimeout(kamenCloseWindow,5000,elem);
+        }
+        // document.getElementById("ddSubmit").setAttribute('disabled',true)
+    }    
 document.querySelector("#ddSignUp0").onclick=function(){
     kamenFormShow();
 } 
@@ -264,10 +323,12 @@ function ddCheckFields()
     if(ddNameValidation() && ddEmailValidation() && ddTelephoneValidation() && ddWebsiteValidation() && ddMessageValidation()) 
     {
         document.getElementById("ddSubmit").removeAttribute('disabled')
+        console.log('qweqwe');
         // console.log(document.getElementById("ddSubmit").setAttribute('disabled',false));
         
     } else {
-        document.getElementById("ddSubmit").setAttribute('disabled',true)
+        document.getElementById("ddSubmit").setAttribute('disabled',true);
+        console.log('1');
         // console.log(document.getElementById("ddSubmit").style.setAttribute('disabled',true));
     }
 }
