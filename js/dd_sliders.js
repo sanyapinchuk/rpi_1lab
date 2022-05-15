@@ -295,10 +295,13 @@ document.querySelector("#kamenSubmit").onclick=function()
         if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
             if (kamenCounter < 1) {
                 var elem=document.getElementById("kamenAlert");
-            } else var elem=document.getElementById("kamenAlert2");
-            kamenCounter++;
-            elem.style.display="block";
-            setTimeout(kamenCloseWindow,5000,elem);
+            } else 
+            {
+                var elem=document.getElementById("kamenAlert2");
+                kamenCounter++;
+                elem.style.display="block";
+                setTimeout(kamenCloseWindow,5000,elem);
+            }
         }
         // document.getElementById("ddSubmit").setAttribute('disabled',true)
     }    

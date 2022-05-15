@@ -302,6 +302,7 @@ li{
     color: #454444;
     margin-top: 30px;
     line-height: 32px;
+    cursor: pointer;
 }
 .contactbutton:hover, .contactbuttondd:hover {
     background-color: #454444;
