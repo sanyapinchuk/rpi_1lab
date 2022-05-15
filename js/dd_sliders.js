@@ -88,6 +88,7 @@ function bodyInit()
 
     //for 3 task
     document.querySelector("#first_background").style.backgroundImage = images[0];
+
 }
 
 function ddNameValidation()
@@ -280,7 +281,10 @@ function kamenCloseWindow(alertWindow)
 }
 
 var kamenCounter = 0;
-document.querySelector("#kamenSubmit").onclick=function()
+var kamSub = document.querySelector("#kamenSubmit");
+if(kamSub!=null)
+{
+    kamSub.onclick=function()
     {   
         if (kamenCounter < 1) {
             var elem=document.getElementById("kamenAlert");
@@ -290,7 +294,7 @@ document.querySelector("#kamenSubmit").onclick=function()
         setTimeout(kamenCloseWindow,5000,elem);
     }
 
-    document.querySelector("#kamenSubmit").onclick=function()
+    kamSub.onclick=function()
     {
         if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
             if (kamenCounter < 1) {
@@ -305,6 +309,8 @@ document.querySelector("#kamenSubmit").onclick=function()
         }
         // document.getElementById("ddSubmit").setAttribute('disabled',true)
     }    
+}
+    
 document.querySelector("#ddSignUp0").onclick=function(){
     kamenFormShow();
 } 
@@ -315,8 +321,12 @@ document.querySelector("#ddSignUp2").onclick=function(){
     kamenFormShow();
 } 
 function kamenFormShow(){
+    ShowForm();
+
     document.getElementById("kamenFormSignUp").style.display="block";
     document.getElementById("wrapper").style.opacity = "0.2";
+
+    
 }
 
 function ddCheckFields()
@@ -442,7 +452,9 @@ document.querySelector("#ddAll").onclick=function()
         document.querySelector("#first_blur").style.opacity = "1";
         var warn = setTimeout('secFunc()', 400);
     }
-    document.querySelector("#kamenCross").onclick = function(){
-        document.getElementById("kamenFormSignUp").style.display="none";
-        document.getElementById("wrapper").style.opacity = "1"
-    }
+    var cross = document.querySelector("#kamenCross");
+    if(cross!= null)
+        document.querySelector("#kamenCross").onclick = function(){
+            document.getElementById("kamenFormSignUp").style.display="none";
+            document.getElementById("wrapper").style.opacity = "1"
+        }
