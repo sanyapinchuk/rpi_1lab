@@ -18,7 +18,7 @@ function ShowForm()
     newDiv.appendChild(cross);
 
     var form = document.createElement("form");
-    form.setAttribute("onkeypress","kamenCheckFields();");
+    //form.setAttribute("onkeypress","kamenCheckFields();");
     form.setAttribute("onsubmit","return false");
     form.id ="kamenform";
 
@@ -28,21 +28,21 @@ function ShowForm()
     in1.id = "kamenName";
     in1.setAttribute("placeholder","Name*");
     in1.required = true;
-    in1.setAttribute("onfocusout","ddNameValidation()");
+    //in1.setAttribute("onfocusout","ddNameValidation()");
     
     var in2 = document.createElement("input");
     in2.setAttribute("type","email");
     in2.id = "kamenEmail";
     in2.setAttribute("placeholder","E-mail*");
     in2.required = true;
-    in2.setAttribute("onfocusout","ddEmailValidation()");
+    //in2.setAttribute("onfocusout","ddEmailValidation()");
 
     var in3 = document.createElement("input");
     in3.setAttribute("type","telephone");
     in3.id = "kamenTelephone";
     in3.setAttribute("placeholder","Telephone*");
     in3.required = true;
-    in3.setAttribute("onfocusout","ddTelephoneValidation()");
+    //in3.setAttribute("onfocusout","ddTelephoneValidation()");
 
     var in4 = document.createElement("input");
     in4.setAttribute("type","submit");
