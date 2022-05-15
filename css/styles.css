@@ -481,7 +481,6 @@ li{
     width: 25%;
     height: 708px;
     overflow: hidden;
-    overflow: hidden;
 }
 .around_two_pictures div{
     background-position: center;
@@ -499,6 +498,27 @@ li{
 .around_two_pictures div:hover{
     transform: scale(1.3);
 }
+
+.two_lines{
+    overflow: hidden;
+}
+.two_lines div{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.two_lines div{
+    /* width: 400px; */
+    transition: all 0.8s;
+}
+.two_lines:hover div{
+    transform: scale(1.1);
+}
+.two_lines div:hover{
+    transform: scale(1.3);
+}
+
+
 #prices_k {
     height: 780px;
     width: 1600px;
@@ -1073,6 +1093,12 @@ footer input::placeholder{
     background-image: url('../img/pictureset/8.png'); 
     height: 35%;
 }
+.ddpngs{
+    width: 100%;
+    height: 100% !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .dd_height8759
 {
     height: 87.59px;
@@ -1240,4 +1266,17 @@ span
 }
 #secwrapper{
     width: 1600px;
+}
+/*#pictureset_k{
+    flex-direction: column;
+}*/
+.two_lines{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+.two_images{
+    height: 100%;
+    width: 50%;
 }

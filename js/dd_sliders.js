@@ -283,7 +283,7 @@ function kamenCloseWindow(alertWindow)
     alertWindow.style.display="none";
 
     document.getElementById("kamenFormSignUp").style.display="none";
-    document.getElementById("wrapper").style.opacity = "1"
+        document.getElementById("wrapper").style.opacity = "1"
 }
 
     
@@ -321,52 +321,143 @@ document.querySelector("#ddSubmit").onclick=function()
         }
     }
 
-document.querySelector("#ddAll").onclick=function()
+    document.querySelector("#ddAll").onclick=function()
     {
-        document.getElementById("dd_1png").style.backgroundImage="url('img/pictureset/1.png')"; 
-        document.getElementById("dd_2png").style.backgroundImage="url('img/pictureset/2.png')"; 
-        document.getElementById("dd_3png").style.backgroundImage="url('img/pictureset/3.png')"; 
-        document.getElementById("dd_4png").style.backgroundImage="url('img/pictureset/4.png')"; 
-        document.getElementById("dd_5png").style.backgroundImage="url('img/pictureset/5.png')"; 
-        document.getElementById("dd_6png").style.backgroundImage="url('img/pictureset/6.png')"; 
-        document.getElementById("dd_7png").style.backgroundImage="url('img/pictureset/7.png')"; 
-        document.getElementById("dd_8png").style.backgroundImage="url('img/pictureset/8.png')";        
+        let pictblock =  document.getElementById("pictureset_k");
+        pictblock.innerHTML = "";
+        pictblock.style.flexDirection = "row";
+
+
+        let ar1 = document.createElement("div");
+        ar1.className="around_two_pictures";
+        let ph1 = document.createElement("div");
+        ph1.id = "dd_1png";
+        let ph2 = document.createElement("div");
+        ph2.id = "dd_2png";
+        ar1.appendChild(ph1);
+        ar1.appendChild(ph2);
+
+        let ar2 = document.createElement("div");
+        ar2.className="around_two_pictures";
+        let ph3 = document.createElement("div");
+        ph3.id = "dd_3png";
+        let ph4 = document.createElement("div");
+        ph4.id = "dd_4png";
+        ar2.appendChild(ph3);
+        ar2.appendChild(ph4);
+
+        let ar3 = document.createElement("div");
+        ar3.className="around_two_pictures";
+        let ph5 = document.createElement("div");
+        ph5.id = "dd_5png";
+        let ph6 = document.createElement("div");
+        ph6.id = "dd_6png";
+        ar3.appendChild(ph5);
+        ar3.appendChild(ph6);
+        
+        let ar4 = document.createElement("div");
+        ar4.className="around_two_pictures";
+        let ph7 = document.createElement("div");
+        ph7.id = "dd_7png";
+        let ph8 = document.createElement("div");
+        ph8.id = "dd_8png";
+        ar4.appendChild(ph7);
+        ar4.appendChild(ph8);
+        
+
+        pictblock.appendChild(ar1);
+        pictblock.appendChild(ar2);
+        pictblock.appendChild(ar3);
+        pictblock.appendChild(ar4);
+
     } 
     
     document.querySelector("#ddSite").onclick=function()
     {
-        document.getElementById("dd_1png").style.backgroundImage="url('img/2ndPagePic.png')"; 
-        document.getElementById("dd_2png").style.backgroundImage="url('img/Arrow.png')"; 
-        document.getElementById("dd_3png").style.backgroundImage="url('img/arrow_left.png')"; 
-        document.getElementById("dd_4png").style.backgroundImage="url('img/arrow_right.png')"; 
-        document.getElementById("dd_5png").style.backgroundImage="url('img/Behance.png')"; 
-        document.getElementById("dd_6png").style.backgroundImage="url('img/black_line.png')"; 
-        document.getElementById("dd_7png").style.backgroundImage="url('img/blog_1.jpg')"; 
-        document.getElementById("dd_8png").style.backgroundImage="url('img/blog_2.jpg')";        
+        let pictblock =  document.getElementById("pictureset_k");
+        pictblock.innerHTML = "";
+        pictblock.style.flexDirection = "column";
+
+        let line1 = document.createElement("div");
+        line1.className = "two_lines";
+    
+        let ph1 = document.createElement("div");
+        ph1.id ="dd_4png";
+        ph1.className = "ddpngs";
+        line1.appendChild(ph1);
+
+        let line2 = document.createElement("div");
+        line2.className = "two_lines";
+
+        let ph2 = document.createElement("div");
+        ph2.id ="dd_5png";
+        ph2.className = "ddpngs";
+        line2.appendChild(ph2);
+
+        let ph3 = document.createElement("div");
+        ph3.id ="dd_6png";
+        ph3.className = "ddpngs";
+        line2.appendChild(ph3);
+
+        pictblock.appendChild(line1);
+        pictblock.appendChild(line2);  
     }
     
     document.querySelector("#ddBrochures").onclick=function()
     {
-        document.getElementById("dd_1png").style.backgroundImage="url('img/blog_3.jpg')"; 
-        document.getElementById("dd_2png").style.backgroundImage="url('img/blog_4.jpg')"; 
-        document.getElementById("dd_3png").style.backgroundImage="url('img/Briefcase Icon.png')"; 
-        document.getElementById("dd_4png").style.backgroundImage="url('img/Businessman Icon.png')"; 
-        document.getElementById("dd_5png").style.backgroundImage="url('img/Chart.png')"; 
-        document.getElementById("dd_6png").style.backgroundImage="url('img/Checked Checkbox Icon.png')"; 
-        document.getElementById("dd_7png").style.backgroundImage="url('img/Combo Chart.png')"; 
-        document.getElementById("dd_8png").style.backgroundImage="url('img/Facebook.png')";        
+        let pictblock =  document.getElementById("pictureset_k");
+        pictblock.innerHTML = "";
+        pictblock.style.flexDirection = "column";
+
+        let line1 = document.createElement("div");
+        line1.className = "two_lines";
+    
+        let ph1 = document.createElement("div");
+        ph1.id ="dd_1png";
+        ph1.className = "ddpngs";
+        line1.appendChild(ph1);
+
+        let line2 = document.createElement("div");
+        line2.className = "two_lines";
+
+        let ph2 = document.createElement("div");
+        ph2.id ="dd_2png";
+        ph2.className = "ddpngs";
+        line2.appendChild(ph2);
+
+        let ph3 = document.createElement("div");
+        ph3.id ="dd_3png";
+        ph3.className = "ddpngs";
+        line2.appendChild(ph3);
+
+        pictblock.appendChild(line1);
+        pictblock.appendChild(line2); 
     }    
 
     document.querySelector("#ddLogos").onclick=function()
     {
-        document.getElementById("dd_1png").style.backgroundImage="url('img/first_background.png')"; 
-        document.getElementById("dd_2png").style.backgroundImage="url('img/wave.png')"; 
-        document.getElementById("dd_3png").style.backgroundImage="url('img/footer_back.png')"; 
-        document.getElementById("dd_4png").style.backgroundImage="url('img/icon.png')"; 
-        document.getElementById("dd_5png").style.backgroundImage="url('img/man.png')"; 
-        document.getElementById("dd_6png").style.backgroundImage="url('img/woman.png')"; 
-        document.getElementById("dd_7png").style.backgroundImage="url('img/Tweter.png')"; 
-        document.getElementById("dd_8png").style.backgroundImage="url('img/lock.png')";        
+        let pictblock =  document.getElementById("pictureset_k");
+        pictblock.innerHTML = "";
+        pictblock.style.flexDirection = "column";
+
+        let line1 = document.createElement("div");
+        line1.className = "two_lines";
+    
+        let ph1 = document.createElement("div");
+        ph1.id ="dd_7png";
+        ph1.className = "ddpngs";
+        line1.appendChild(ph1);
+
+        let line2 = document.createElement("div");
+        line2.className = "two_lines";
+
+        let ph2 = document.createElement("div");
+        ph2.id ="dd_8png";
+        ph2.className = "ddpngs";
+        line2.appendChild(ph2);
+
+        pictblock.appendChild(line1);
+        pictblock.appendChild(line2);        
     } 
 
 
