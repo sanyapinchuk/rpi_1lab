@@ -97,6 +97,7 @@ function AddToForm()
     }
     if (localStorage.getItem('kamenFormShow')=="true") {
         document.getElementById("secwrapper").style.display = "block";
+        document.getElementById("wrapper").style.opacity = "0.2"
     } else {
         document.getElementById("secwrapper").style.display = "none";
     }
