@@ -1,4 +1,4 @@
-
+var kamenCounter = 0;
 function ShowForm()
 {
     var newDiv = document.createElement("div");
@@ -48,7 +48,6 @@ function ShowForm()
     in4.setAttribute("type","submit");
     in4.className ="button";
     in4.id = "kamenSubmit";
-    in4.disabled = true;
 
 
     form.appendChild(in1);
@@ -81,10 +80,31 @@ function ShowForm()
     exdiv.appendChild(m1);
     exdiv.appendChild(m2);
 
-    // Добавляем только что созданный элемент в дерево DOM
+
+    document.querySelector("#kamenSubmit").onclick=function()
+    {
+        if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
+            var elem=null;
+            if (kamenCounter < 1) {
+                elem=document.getElementById("kamenAlert");
+            } else 
+            {
+                elem=document.getElementById("kamenAlert2");
+            }
+            kamenCounter++;
+            elem.style.display="block";
+            setTimeout(kamenCloseWindow,5000,elem);
+            
+        }
+
+    }
+
+   
+    document.querySelector("#kamenCross").onclick = function(){
+        document.getElementById("kamenFormSignUp").style.display="none";
+        document.getElementById("wrapper").style.opacity = "1"
+    }
 }
-
-
 
 
 

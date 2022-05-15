@@ -281,40 +281,11 @@ function kamenCloseWindow(alertWindow)
     
     console.log('закрыто');
     alertWindow.style.display="none";
+
+    document.getElementById("kamenFormSignUp").style.display="none";
+    document.getElementById("wrapper").style.opacity = "1"
 }
 
-var kamenCounter = 0;
-var kamSub = document.querySelector("#kamenSubmit");
-if(kamSub!=null)
-{
-    kamSub.onclick=function()
-    {   
-        if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
-            if (kamenCounter < 1) {
-                var elem=document.getElementById("kamenAlert");
-            } else var elem=document.getElementById("kamenAlert2");
-            kamenCounter++;
-            elem.style.display="block";
-            setTimeout(kamenCloseWindow,5000,elem);
-        }
-    }
-
-    kamSub.onclick=function()
-    {
-        if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
-            if (kamenCounter < 1) {
-                var elem=document.getElementById("kamenAlert");
-            } else 
-            {
-                var elem=document.getElementById("kamenAlert2");
-                kamenCounter++;
-                elem.style.display="block";
-                setTimeout(kamenCloseWindow,5000,elem);
-            }
-        }
-
-    }    
-}
     
 document.querySelector("#ddSignUp0").onclick=function(){
     kamenFormShow();
@@ -439,9 +410,3 @@ document.querySelector("#ddAll").onclick=function()
         document.querySelector("#first_blur").style.opacity = "1";
         var warn = setTimeout('secFunc()', 400);
     }
-    var cross = document.querySelector("#kamenCross");
-    if(cross!= null)
-        document.querySelector("#kamenCross").onclick = function(){
-            document.getElementById("kamenFormSignUp").style.display="none";
-            document.getElementById("wrapper").style.opacity = "1"
-        }
