@@ -49,6 +49,8 @@ else
     }
 }
 
+
+
 function ddShowSliders()
 {  
     if (localStorage.getItem('counter')=="1")
@@ -281,9 +283,10 @@ function kamenCloseWindow(alertWindow)
     
     console.log('закрыто');
     alertWindow.style.display="none";
-
-    document.getElementById("kamenFormSignUp").style.display="none";
-        document.getElementById("wrapper").style.opacity = "1"
+    localStorage.setItem("kamenFormShow",false);
+    // document.getElementById("kamenFormSignUp").style.display="none";
+    document.getElementById("secwrapper").style.display="none";
+    document.getElementById("wrapper").style.opacity = "1"
 }
 
     
@@ -297,8 +300,10 @@ document.querySelector("#ddSignUp2").onclick=function(){
     kamenFormShow();
 } 
 function kamenFormShow(){
-    ShowForm();
-
+    
+    //ShowForm();
+    document.getElementById("secwrapper").style.display="block";
+    localStorage.setItem("kamenFormShow",true);
     document.getElementById("kamenFormSignUp").style.display="block";
     document.getElementById("wrapper").style.opacity = "0.2";
 

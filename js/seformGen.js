@@ -1,15 +1,9 @@
+AddToForm();
 var kamenCounter = 0;
-function ShowForm()
+function AddToForm()
 {
     var newDiv = document.createElement("div");
     newDiv.id = "kamenFormSignUp";
-
-    //newDiv.innerHTML = "<h1>Привет!</h1>";
-
-    
-
-
-    
 
     var cross = document.createElement("div");
     cross.id = "kamenCross";
@@ -57,14 +51,8 @@ function ShowForm()
 
     newDiv.appendChild(form);
 
-
-
-
-
-
     var exdiv = document.getElementById("secwrapper");
     exdiv.appendChild(newDiv);
-
 
     var m1 = document.createElement("div");
     m1.id = "kamenAlert";
@@ -85,10 +73,11 @@ function ShowForm()
     {
         if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
             var elem=null;
-            if (kamenCounter < 1) {
+            if (localStorage.getItem('kamenCounter') == null) {
                 elem=document.getElementById("kamenAlert");
-            } else 
-            {
+                localStorage.setItem('kamenCounter',"1");
+            } 
+            else {
                 elem=document.getElementById("kamenAlert2");
             }
             kamenCounter++;
@@ -101,27 +90,16 @@ function ShowForm()
 
    
     document.querySelector("#kamenCross").onclick = function(){
-        document.getElementById("kamenFormSignUp").style.display="none";
+        document.getElementById("secwrapper").style.display = "none";
+        localStorage.setItem("kamenFormShow",false);
+        // document.getElementById("kamenFormSignUp").style.display="none";
         document.getElementById("wrapper").style.opacity = "1"
     }
+    if (localStorage.getItem('kamenFormShow')=="true") {
+        document.getElementById("secwrapper").style.display = "block";
+    } else {
+        document.getElementById("secwrapper").style.display = "none";
+    }
+
+    //localStorage.setItem("kamenFormShow","false");
 }
-
-
-
-
-
-/*
-
-var str=  
-'<div id="kamenFormSignUp">'+
-    '<div id="kamenCross">X</div>'+
-    '<form onkeypress="kamenCheckFields();" id="kamenform" onsubmit="return false">'+
-        '<input type="name" id ="kamenName" placeholder="Name*" required onfocusout="ddNameValidation()">'+
-        '<input type="email" id="kamenEmail" placeholder="E-mail*" required onfocusout="ddEmailValidation()">'+
-        '<input type="telephone" id="kamenTelephone" placeholder="Telephone*" required onfocusout="ddTelephoneValidation()">'+
-        '<input type="submit" class="button" id="kamenSubmit" disabled></div>'
-    '</form>'+
-'</div>'+
-'<div id="kamenAlert" class="kamenAlertClass">Вы отправили форму</div>'+
-'<div id="kamenAlert2" class="kamenAlertClass">Уже зарегистрированы</div>';
-document.getElementById("secwrapper").innerHTML= str;*/

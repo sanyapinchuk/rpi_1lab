@@ -1196,7 +1196,7 @@ span
     width: 400px;
     height: 230px;
     text-align: center;
-    display: none;
+    display: block;
     position: fixed;
     line-height: 200px;
     user-select: none;
@@ -1266,6 +1266,7 @@ span
 }
 #secwrapper{
     width: 1600px;
+    display: none;
 }
 /*#pictureset_k{
     flex-direction: column;
