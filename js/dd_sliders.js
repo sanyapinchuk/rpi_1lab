@@ -147,7 +147,8 @@ function kamenNameValidation()
 }
 function kamenEmailValidation()
 {
-    var regexp=new RegExp("[a-zA-Z][a-zA-Z0-9]+[@](mail|gmail)['.'](ru|com)");
+    var regexp=new RegExp("[a-zA-Z0-9]([a-zA-Z0-9]|['.'])+[@](mail|gmail)['.'](ru|com)");
+   
     var value=document.getElementById("kamenEmail").value;
     var arr=value.match(regexp);
     if (arr==null)
@@ -194,7 +195,7 @@ function kamenTelephoneValidation()
 
 function ddEmailValidation()
 {
-    var regexp=new RegExp("[a-zA-Z][a-zA-Z0-9]+[@](mail|gmail)['.'](ru|com)");
+    var regexp=new RegExp("[a-zA-Z0-9]([a-zA-Z0-9]|['.'])+[@](mail|gmail)['.'](ru|com)");
     var value=document.getElementById("ddEmail").value;
     var arr=value.match(regexp);
     if (arr==null)
@@ -242,7 +243,7 @@ function ddTelephoneValidation()
 
 function ddWebsiteValidation()
 {
-    var regexp=new RegExp("[a-zA-Z0-9]+['.'](ru|com|by|ua|org|net)");
+    var regexp=new RegExp("([w][w][w]['.'][a-zA-Z0-9]+|[a-zA-Z0-9]+)['.'](ru|com|by|ua|org|net)");
     var value=document.getElementById("ddWebsite").value;
     var arr=value.match(regexp);
     if (arr==null)
