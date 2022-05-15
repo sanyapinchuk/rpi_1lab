@@ -97,7 +97,8 @@ function ddNameValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        return false;
     }
     else
     {
@@ -109,8 +110,9 @@ function ddNameValidation()
                 return true;
             }
         }
-        //  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        
     }
+    alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
     return false;
 }
 
@@ -122,7 +124,8 @@ function kamenNameValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+        return false;
     }
     else
     {
@@ -134,8 +137,9 @@ function kamenNameValidation()
                 return true;
             }
         }
-        //  alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
+    
     }
+    alert("Имя должно начинаться с большой буквы и содержать только латинские буквы");
     return false;
 }
 function kamenEmailValidation()
@@ -145,7 +149,8 @@ function kamenEmailValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+        alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+        return false;
     }
     else
     {      
@@ -157,6 +162,7 @@ function kamenEmailValidation()
             }
         } 
     }
+    alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
     return false;
 }
 function kamenTelephoneValidation()
@@ -166,7 +172,8 @@ function kamenTelephoneValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Телефон должен вводится в виде: +xxxxxxxxx");
+        alert("Телефон должен вводится в виде: +xxxxxxxxx");
+        return false;//  
     }
     else
     {
@@ -178,6 +185,7 @@ function kamenTelephoneValidation()
             }
         }
     }
+    alert("Телефон должен вводится в виде: +xxxxxxxxx");
     return false;
 }
 
@@ -188,7 +196,8 @@ function ddEmailValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+        alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
+        return false; 
     }
     else
     {      
@@ -200,6 +209,7 @@ function ddEmailValidation()
             }
         } 
     }
+    alert("Введённый e-mail должен начинаться с буквы латинского алфавита и содержать комбинацию букв и цифр,после чего идёт @mail или @gmail .ru или .com");
     return false;
 }
 
@@ -210,7 +220,8 @@ function ddTelephoneValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Телефон должен вводится в виде: +xxxxxxxxx");
+        alert("Телефон должен вводится в виде: +xxxxxxxxx");
+        return false;
     }
     else
     {
@@ -222,6 +233,7 @@ function ddTelephoneValidation()
             }
         }
     }
+    alert("Телефон должен вводится в виде: +xxxxxxxxx");
     return false;
 }
 
@@ -232,7 +244,8 @@ function ddWebsiteValidation()
     var arr=value.match(regexp);
     if (arr==null)
     {
-        return false;//  alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
+        alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
+        return false;
     }
     else
     {
@@ -244,6 +257,7 @@ function ddWebsiteValidation()
                 return true;
             }
         }
+        alert("Имя сайта должно состоять из букв латинского алфавита или цифр, оканчивающихся на by,net,com,ua,ru или org");
         return false;
     }
 }
@@ -253,24 +267,13 @@ function ddMessageValidation()
     var value=document.getElementById("ddMessage").value;
     if (value.length==0)
     {
-        return false;//  alert("Вы не ввели сообщение");
+        alert("Вы не ввели сообщение");
+        return false;  
     }
     return true;
 }
 
 
-function kamenCheckFields(){
-    console.log('clicked');
-    if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) 
-    {
-        document.getElementById("kamenSubmit").removeAttribute('disabled')
-        // console.log(document.getElementById("ddSubmit").setAttribute('disabled',false));
-        
-    } else {
-        document.getElementById("kamenSubmit").setAttribute('disabled',true)
-        // console.log(document.getElementById("ddSubmit").style.setAttribute('disabled',true));
-    }
-}
 function kamenCloseWindow(alertWindow)
 {
     console.log(alertWindow);
@@ -282,12 +285,14 @@ function kamenCloseWindow(alertWindow)
 var kamenCounter = 0;
 document.querySelector("#kamenSubmit").onclick=function()
     {   
-        if (kamenCounter < 1) {
-            var elem=document.getElementById("kamenAlert");
-        } else var elem=document.getElementById("kamenAlert2");
-        kamenCounter++;
-        elem.style.display="block";
-        setTimeout(kamenCloseWindow,5000,elem);
+        if(kamenNameValidation() && kamenEmailValidation() && kamenTelephoneValidation()) {
+            if (kamenCounter < 1) {
+                var elem=document.getElementById("kamenAlert");
+            } else var elem=document.getElementById("kamenAlert2");
+            kamenCounter++;
+            elem.style.display="block";
+            setTimeout(kamenCloseWindow,5000,elem);
+        }
     }
 
     document.querySelector("#kamenSubmit").onclick=function()
@@ -303,7 +308,7 @@ document.querySelector("#kamenSubmit").onclick=function()
                 setTimeout(kamenCloseWindow,5000,elem);
             }
         }
-        // document.getElementById("ddSubmit").setAttribute('disabled',true)
+
     }    
 document.querySelector("#ddSignUp0").onclick=function(){
     kamenFormShow();
@@ -317,23 +322,6 @@ document.querySelector("#ddSignUp2").onclick=function(){
 function kamenFormShow(){
     document.getElementById("kamenFormSignUp").style.display="block";
     document.getElementById("wrapper").style.opacity = "0.2";
-}
-
-function ddCheckFields()
-{
-    console.log('clicked');
-    console.log(document.getElementById("ddSubmit").style.disabled);
-    if(ddNameValidation() && ddEmailValidation() && ddTelephoneValidation() && ddWebsiteValidation() && ddMessageValidation()) 
-    {
-        document.getElementById("ddSubmit").removeAttribute('disabled')
-        console.log('qweqwe');
-        // console.log(document.getElementById("ddSubmit").setAttribute('disabled',false));
-        
-    } else {
-        document.getElementById("ddSubmit").setAttribute('disabled',true);
-        console.log('1');
-        // console.log(document.getElementById("ddSubmit").style.setAttribute('disabled',true));
-    }
 }
 
 
@@ -350,7 +338,6 @@ document.querySelector("#ddSubmit").onclick=function()
             elem.style.display="block";
             setTimeout(ddCloseWindow,5000);
         }
-        // document.getElementById("ddSubmit").setAttribute('disabled',true)
     }
 
 document.querySelector("#ddAll").onclick=function()
