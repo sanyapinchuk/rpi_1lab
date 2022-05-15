@@ -290,6 +290,7 @@ li{
     font-family: 'Montserrat', sans-serif;
     background-color: #fff; 
     color:#454444;
+    cursor: pointer;
 }
 .contactbuttondd {
     margin: auto;
@@ -1165,10 +1166,9 @@ span
 {
     
 }
-#kamenFormSignUp
-{
+#kamenFormSignUp {
     width: 400px;
-    height: 200px;
+    height: 230px;
     text-align: center;
     display: none;
     position: fixed;
@@ -1180,21 +1180,32 @@ span
     background-color: #777;
     color: white;
     text-align: center;
+
 }
-#kamenform{
+#kamenform {
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding-left: 0;
+    height: 100%;
+    padding-bottom: 0;
 }
-#kamenFormSignUp input{
+#kamenFormSignUp input {
     /* display: block; */
-
-    height: 30px;
+    height: 38px;
     background-color: #eee;
-    
+    outline: none;
+    width: 60%;
+    border: 0;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+#kamenFormSignUp input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 #kamenFormSignUp input:first-child{
     margin-top: 20px;    
@@ -1202,6 +1213,7 @@ span
 #kamenFormSignUp input:last-child{
     background-color: #fff;
     color: #000000;  
+    margin-bottom: 10px;
 }
 .kamenAlertClass
 {
